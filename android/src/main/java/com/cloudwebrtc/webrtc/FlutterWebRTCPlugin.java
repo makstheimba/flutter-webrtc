@@ -156,7 +156,9 @@ public class FlutterWebRTCPlugin implements FlutterPlugin, ActivityAware {
             final Set<RTCAudioManager.AudioDevice> availableDevices) {
         Log.d(TAG, "onAudioManagerDevicesChanged: " + availableDevices + ", "
                 + "selected: " + device);
-        // TODO(henrika): add callback handler.
+        // <<<Updated TT-13664<<<
+        channel.invokeMethod("onAudioManagerDevicesChanged", "");
+        // <<<Updated TT-13664<<<
     }
 
     private class LifeCycleObserver implements Application.ActivityLifecycleCallbacks, DefaultLifecycleObserver {

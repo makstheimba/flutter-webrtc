@@ -167,7 +167,9 @@ public class RTCAudioManager {
     wiredHeadsetReceiver = new WiredHeadsetReceiver();
     amState = AudioManagerState.UNINITIALIZED;
 
-    useSpeakerphone = SPEAKERPHONE_AUTO;
+    // <<<Updated TT-13664<<<
+    useSpeakerphone = SPEAKERPHONE_FALSE; // CHANGED: useSpeakerphone = SPEAKERPHONE_AUTO
+    // <<<Updated TT-13664<<<
 
     Log.d(TAG, "useSpeakerphone: " + useSpeakerphone);
     if (useSpeakerphone.equals(SPEAKERPHONE_FALSE)) {
